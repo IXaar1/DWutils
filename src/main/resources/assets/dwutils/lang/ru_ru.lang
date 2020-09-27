@@ -46,7 +46,3 @@ item.copper_coin.name=Медный мурион
 item.silver_coin.name=Серебряный мурион
 item.gold_coin.name=Золотой мурион
 
-dwutils.commands.customteleport.fail=У вас недостаточно денег!
-dwutils.commands.prison.success.1=Игорок
-dwutils.commands.prison.success.2=посажен в тюрьму. Ура!
-dwutils.commands.prison.notifyplayer=Поздравляю! Вы в тюрьме.

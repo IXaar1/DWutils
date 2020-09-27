@@ -46,7 +46,3 @@ item.copper_coin.name=Copper Murion
 item.silver_coin.name=Silver Murion
 item.gold_coin.name=Gold Murion
 
-dwutils.commands.customteleport.fail=You don't have enough money!
-dwutils.commands.prison.success.1=Player
-dwutils.commands.prison.success.2=is in prison now. Yay!
-dwutils.commands.prison.notifyplayer=You are in the prison. Congratulations!

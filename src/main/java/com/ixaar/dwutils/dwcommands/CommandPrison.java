@@ -58,10 +58,10 @@ public class CommandPrison extends CommandBase {
         CustomTeleporter.teleportTo(player, DWConfig.prison_position.dim, DWConfig.prison_position.x, DWConfig.prison_position.y, DWConfig.prison_position.z);
 
 
-        TextComponentTranslation CommandSuccessMessage = new TextComponentTranslation(Utils.getLang().localize("commands.prison.success.1") + " " + player.getName() + " " + Utils.getLang().localize("commands.prison.success.2"));
+        TextComponentTranslation CommandSuccessMessage = new TextComponentTranslation(DWConfig.prison_localisation.command_prison_success_1 + " " + player.getName() + " " + DWConfig.prison_localisation.command_prison_success_2);
         CommandSuccessMessage.getStyle().setColor(TextFormatting.GREEN);
         server.getPlayerList().getPlayerByUsername(sender.getName()).sendMessage(CommandSuccessMessage);
-        player.sendMessage(new TextComponentString(Utils.getLang().localize("commands.prison.notifyplayer")));
+        player.sendMessage(new TextComponentString(DWConfig.prison_localisation.command_prison_notify_player));
 
     }
 

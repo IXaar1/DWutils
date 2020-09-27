@@ -69,7 +69,7 @@ public class CommandCustomTeleport extends CommandBase {
 
 
         if (!itemFound || cost > itemCount) {
-            ((EntityPlayer) entity).sendMessage(new TextComponentString(Utils.getLang().localize("commands.customteleport.fail")));
+            ((EntityPlayer) entity).sendMessage(new TextComponentString(DWConfig.paid_teleport_localisation.command_paid_teleport_fail));
         } else if (entity.world != null) {
             while (cost > 0) {
                 int slot = ((EntityPlayer) entity).inventory.findSlotMatchingUnusedItem(new ItemStack(item));

@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 
-@Mod(modid = "dwutils", version = "0.8.1-hotfix2")
+@Mod(modid = "dwutils", version = "0.8.2")
 public class DragonworldUtils {
 
     public static final CreativeTabs CTAB = new CreativeTabs("dwtab") {
