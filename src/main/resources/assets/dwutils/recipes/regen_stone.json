@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ZXZ",
+    "YAY",
+    "ZXZ"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:glowstone"
+    },
+    "Y": {
+      "item": "minecraft:redstone"
+    },
+    "Z": {
+      "item": "minecraft:diamond"
+    },
+    "A": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "result": {
+    "item": "dwutils:regen_stone",
+    "count": 1
+  }
+}

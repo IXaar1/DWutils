@@ -1,0 +1,60 @@
+package com.ixaar.dwutils.dwtools;
+
+import io.netty.buffer.ByteBuf;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraftforge.fml.common.network.ByteBufUtils;
+import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
+import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
+
+public class MessageCustomReachAttack implements IMessage {
+
+    public static class Handler implements IMessageHandler<MessageCustomReachAttack, IMessage> {
+
+        @Override
+        public IMessage onMessage(final MessageCustomReachAttack message, MessageContext ctx) {
+            final EntityPlayerMP player = ctx.getServerHandler().player;
+            player.getServer().addScheduledTask(new Runnable() {
+                @Override
+                public void run() {
+                    Entity theEntity = player.world.getEntityByID(message.entityId);
+                    if (player.inventory.getCurrentItem() == null || player.inventory.getCurrentItem().isEmpty()) {
+                        return;
+                    }
+                    if (player.inventory.getCurrentItem().getItem() instanceof IExtendedReach) {
+                        IExtendedReach theExtendedReachWeapon = (IExtendedReach) player.inventory.getCurrentItem()
+                                .getItem();
+                        double distanceSq = player.getDistanceSq(theEntity);
+                        double reachSq = theExtendedReachWeapon.getReach() * theExtendedReachWeapon.getReach();
+                        if (reachSq >= distanceSq) {
+                            player.attackTargetEntityWithCurrentItem(theEntity);
+                        }
+                    }
+                    return;
+                }
+            });
+            return null;
+        }
+    }
+
+    private int entityId;
+
+    public MessageCustomReachAttack() {
+
+    }
+
+    public MessageCustomReachAttack(int entityId) {
+        this.entityId = entityId;
+    }
+
+    @Override
+    public void fromBytes(ByteBuf buf) {
+        entityId = ByteBufUtils.readVarInt(buf, 4);
+    }
+
+    @Override
+    public void toBytes(ByteBuf buf) {
+        ByteBufUtils.writeVarInt(buf, entityId, 4);
+    }
+}

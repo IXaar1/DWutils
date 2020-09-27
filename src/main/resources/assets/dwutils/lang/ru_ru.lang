@@ -1,0 +1,52 @@
+item.iron_sword_1.name=Меч(Мат.: жел., Проч.: 1)
+item.iron_sword_2.name=Меч(Мат.: жел., Проч.: 2)
+item.iron_sword_3.name=Меч(Мат.: жел., Проч.: 3)
+item.iron_sword_4.name=Меч(Мат.: жел., Проч.: 4)
+
+item.sword5.name=Меч(5)
+item.sword10.name=Меч(10)
+item.sword20.name=Меч(20)
+item.sword50.name=Меч(50)
+item.sword75.name=Меч(75)
+item.sword100.name=Меч(100)
+item.sword150.name=Меч(150)
+item.sword200.name=Меч(200)
+item.sword350.name=Меч(350)
+item.sword500.name=Меч(500)
+item.sword750.name=Меч(750)
+item.sword950.name=Меч(950)
+
+item.o_iron_pike_7.name=Пика(Мат.: жел., Проч.: 1, Дист.:7)
+item.o_iron_pike_8.name=Пика(Мат.: жел., Проч.: 1, Дист.:8)
+item.o_iron_pike_9.name=Пика(Мат.: жел., Проч.: 1, Дист.:9)
+item.o_iron_pike_10.name=Пика(Мат.: жел., Проч.: 1, Дист.:10)
+
+item.f_iron_pike_7.name=Пика(Мат.: жел., Проч.: 4, Дист.:7)
+item.f_iron_pike_8.name=Пика(Мат.: жел., Проч.: 4, Дист.:8)
+item.f_iron_pike_9.name=Пика(Мат.: жел., Проч.: 4, Дист.:9)
+item.f_iron_pike_10.name=Пика(Мат.: жел., Проч.: 4, Дист.:10)
+
+item.regen_stone.name=Камень регенерации
+
+itemGroup.dwtab=DW Utils
+
+dwutils.regen_stone.tooltip.1=Восстанавливает жизни игрока. Тратит еду. Может отравить игрока, если у него недостаточно сытости.
+dwutils.regen_stone.tooltip.2=Стоимость:
+
+item.two_handed_iron_sword.name=Железный двуручный меч
+item.two_handed_diamond_sword.name=Алмазный двуручный меч
+
+item.shield_100.name=Щит(Проч.: 100)
+item.shield_250.name=Щит(Проч.: 250)
+item.shield_500.name=Щит(Проч.: 500)
+item.shield_750.name=Щит(Проч.: 750)
+item.shield_1000.name=Щит(Проч.: 1000)
+
+item.copper_coin.name=Медный мурион
+item.silver_coin.name=Серебряный мурион
+item.gold_coin.name=Золотой мурион
+
+dwutils.commands.customteleport.fail=У вас недостаточно денег!
+dwutils.commands.prison.success.1=Игорок
+dwutils.commands.prison.success.2=посажен в тюрьму. Ура!
+dwutils.commands.prison.notifyplayer=Поздравляю! Вы в тюрьме.

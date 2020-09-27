@@ -1,0 +1,52 @@
+item.iron_sword_1.name=Sword(Mat: iron, Dur: 1)
+item.iron_sword_2.name=Sword(Mat: iron, Dur: 2)
+item.iron_sword_3.name=Sword(Mat: iron, Dur: 3)
+item.iron_sword_4.name=Sword(Mat: iron, Dur: 4)
+
+item.sword5.name=Sword(5)
+item.sword10.name=Sword(10)
+item.sword20.name=Sword(20)
+item.sword50.name=Sword(50)
+item.sword75.name=Sword(75)
+item.sword100.name=Sword(100)
+item.sword150.name=Sword(150)
+item.sword200.name=Sword(200)
+item.sword350.name=Sword(350)
+item.sword500.name=Sword(500)
+item.sword750.name=Sword(750)
+item.sword950.name=Sword(950)
+
+item.o_iron_pike_7.name=Pike(Mat: iron, Dur: 1, Reach:7)
+item.o_iron_pike_8.name=Pike(Mat: iron, Dur: 1, Reach:8)
+item.o_iron_pike_9.name=Pike(Mat: iron, Dur: 1, Reach:9)
+item.o_iron_pike_10.name=Pike(Mat: iron, Dur: 1, Reach:10)
+
+item.f_iron_pike_7.name=Pike(Mat: iron, Dur: 4, Reach:7)
+item.f_iron_pike_8.name=Pike(Mat: iron, Dur: 4, Reach:8)
+item.f_iron_pike_9.name=Pike(Mat: iron, Dur: 4, Reach:9)
+item.f_iron_pike_10.name=Pike(Mat: iron, Dur: 4, Reach:10)
+
+item.regen_stone.name=Regenerating Stone
+
+itemGroup.dwtab=DW Utils
+
+dwutils.regen_stone.tooltip.1=Regenerates player. Takes food as pay. Can poison player if he hasn't got enough food left.
+dwutils.regen_stone.tooltip.2=Food cost:
+
+item.two_handed_iron_sword.name=Iron Longsword
+item.two_handed_diamond_sword.name=Diamond Longsword
+
+item.shield_100.name=Shield(Dur: 100)
+item.shield_250.name=Shield(Dur: 250)
+item.shield_500.name=Shield(Dur: 500)
+item.shield_750.name=Shield(Dur: 750)
+item.shield_1000.name=Shield(Dur: 1000)
+
+item.copper_coin.name=Copper Murion
+item.silver_coin.name=Silver Murion
+item.gold_coin.name=Gold Murion
+
+dwutils.commands.customteleport.fail=You don't have enough money!
+dwutils.commands.prison.success.1=Player
+dwutils.commands.prison.success.2=is in prison now. Yay!
+dwutils.commands.prison.notifyplayer=You are in the prison. Congratulations!
