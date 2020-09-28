@@ -29,7 +29,7 @@ public class CommandCustomTeleport extends CommandBase {
 
     @Override
     public String getUsage(ICommandSender sender) {
-        return "/tpz [nickname] <x> <y> <z> [cost]";
+        return "/tpz [nickname] <x> <y> <z> modid:item [cost]";
     }
 
     public int getRequiredPermissionLevel() {
@@ -38,22 +38,26 @@ public class CommandCustomTeleport extends CommandBase {
 
     @Override
     public List<String> getTabCompletions(MinecraftServer server, ICommandSender sender, String[] args, BlockPos targetPos) {
-        return args.length == 1 ? getListOfStringsMatchingLastWord(args, server.getOnlinePlayerNames()) : Collections.emptyList();
+        if (args.length == 1) {
+            return getListOfStringsMatchingLastWord(args, server.getOnlinePlayerNames());
+        } else {
+            return args.length == 5 ? getListOfStringsMatchingLastWord(args, Item.REGISTRY.getKeys()) : Collections.emptyList();
+        }
     }
 
     @Override
     public void execute(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException {
-        if (args.length < 5) throw new WrongUsageException(this.getUsage(sender));
+        if (args.length < 6) throw new WrongUsageException(this.getUsage(sender));
 
         Entity entity = getEntity(server, sender, args[0]);
-        Item item = Item.getByNameOrId(DWConfig.item);
+        Item item = getItemByText(sender, args[4]);
 
         if (entity == null) {
             throw new PlayerNotFoundException("commands.generic.player.notFound", new Object[]{args[0]});
         }
 
-        int cost = Integer.parseInt(args[4]);
 
+        int cost = Integer.parseInt(args[5]);
 
         boolean itemFound = false;
         int itemCount = 0;
@@ -67,9 +71,9 @@ public class CommandCustomTeleport extends CommandBase {
             }
         }
 
-
+        // Do not work with meta items!
         if (!itemFound || cost > itemCount) {
-            ((EntityPlayer) entity).sendMessage(new TextComponentString(DWConfig.paid_teleport_localisation.command_paid_teleport_fail));
+            ((EntityPlayer) entity).sendMessage(new TextComponentString(DWConfig.paid_teleport_localisation.command_paid_teleport_fail + " " + args[5] + " " + item.getItemStackDisplayName(new ItemStack(item))));
         } else if (entity.world != null) {
             while (cost > 0) {
                 int slot = ((EntityPlayer) entity).inventory.findSlotMatchingUnusedItem(new ItemStack(item));

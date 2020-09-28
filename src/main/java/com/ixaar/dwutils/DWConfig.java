@@ -5,6 +5,7 @@ import net.minecraftforge.common.config.ConfigManager;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import org.omg.CORBA.PUBLIC_MEMBER;
 
 @Config(modid = "dwutils", name = "Dragonworld Utils")
 public class DWConfig {
@@ -16,11 +17,9 @@ public class DWConfig {
     @Config.RangeInt(min = 0, max = 20)
     @Config.Comment("Food pay for Regen Stone")
     public static int FoodPay = 8;
-    @Config.Comment("Item that will be used as coin")
-    public static String item = "dwutils:silver_coin";
 
     public static class CommandPaidTeleportLocalisation {
-        public String command_paid_teleport_fail = "You don't have enough money!";
+        public String command_paid_teleport_fail = "You don't have enough money! You need";
     }
 
     public static class CommandPrisonLocalisation {
